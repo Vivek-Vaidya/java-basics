@@ -13,6 +13,16 @@ public class lcmhcf {
        return (u / GDC(u, v)) * v;
    }
 
+   static int HCF (int u, int v) {
+       int hcf = 0;
+       for (int i = 1; i <= u || i <= v; i++) {
+           if (u%i == 0 && v%i == 0)
+               hcf = i;
+       }
+       return hcf;
+
+   }
+
     public static void main(String[] args) {
         int a, b;
         System.out.print("Enter the two numbers : ");
@@ -20,6 +30,7 @@ public class lcmhcf {
         a = in.nextInt();
         b = in.nextInt();
         System.out.println("lcm of the Entered Numbers is : " + LCM(a,b));
+        System.out.println("hcf of the Entered Numbers is : " + HCF(a, b));
 
     }
 }
